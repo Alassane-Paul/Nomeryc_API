@@ -1,0 +1,7 @@
+node_modules/
+.env
+docs/
+
+# Fichiers uploadés
+uploads/
+!uploads/.gitkeep

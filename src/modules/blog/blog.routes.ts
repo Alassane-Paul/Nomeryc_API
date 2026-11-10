@@ -1,5 +1,11 @@
 import { Router } from 'express';
-import { getPosts, getPost, getAllPosts, createPost, updatePost, deletePost, addComment } from './blog.controller';
+import { getPosts } from './list/list.controller';
+import { getAllPosts } from './admin-list/admin-list.controller';
+import { getPost } from './get/get.controller';
+import { createPost } from './create/create.controller';
+import { updatePost } from './update/update.controller';
+import { deletePost } from './delete/delete.controller';
+import { addComment } from './add-comment/add-comment.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

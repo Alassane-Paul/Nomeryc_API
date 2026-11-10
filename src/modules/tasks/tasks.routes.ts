@@ -1,5 +1,8 @@
 import { Router } from 'express';
-import { getTasks, createTask, updateTask, deleteTask } from './tasks.controller';
+import { getTasks } from './list/list.controller';
+import { createTask } from './create/create.controller';
+import { updateTask } from './update/update.controller';
+import { deleteTask } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

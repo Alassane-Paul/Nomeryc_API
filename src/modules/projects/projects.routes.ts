@@ -1,5 +1,9 @@
 import { Router } from 'express';
-import { getProjects, getProject, createProject, updateProject, deleteProject } from './projects.controller';
+import { getProjects } from './list/list.controller';
+import { getProject } from './get/get.controller';
+import { createProject } from './create/create.controller';
+import { updateProject } from './update/update.controller';
+import { deleteProject } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

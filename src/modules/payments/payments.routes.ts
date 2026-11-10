@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { initStripePayment, initFedapayPayment } from './payments.controller';
+import { initStripePayment } from './stripe/stripe.controller';
+import { initFedapayPayment } from './fedapay/fedapay.controller';
 import { authMiddleware } from '../../middlewares/auth.middleware';
 
 const paymentsRouter = Router();

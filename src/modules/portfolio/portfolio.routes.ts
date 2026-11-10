@@ -1,5 +1,10 @@
 import { Router } from 'express';
-import { getPortfolioItems, getPortfolioItem, getAllPortfolioItems, createPortfolioItem, updatePortfolioItem, deletePortfolioItem } from './portfolio.controller';
+import { getPortfolioItems } from './list/list.controller';
+import { getPortfolioItem } from './get/get.controller';
+import { getAllPortfolioItems } from './admin-list/admin-list.controller';
+import { createPortfolioItem } from './create/create.controller';
+import { updatePortfolioItem } from './update/update.controller';
+import { deletePortfolioItem } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

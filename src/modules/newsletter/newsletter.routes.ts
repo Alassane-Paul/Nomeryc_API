@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
-import { subscribe, unsubscribe } from './newsletter.controller';
+import { subscribe } from './subscribe/subscribe.controller';
+import { unsubscribe } from './unsubscribe/unsubscribe.controller';
 
 const newsletterRouter = Router();
 

@@ -1,5 +1,10 @@
 import { Router } from 'express';
-import { getFaqs, getFaq, getAllFaqs, createFaq, updateFaq, deleteFaq } from './faqs.controller';
+import { getFaqs } from './list/list.controller';
+import { getAllFaqs } from './admin-list/admin-list.controller';
+import { getFaq } from './get/get.controller';
+import { createFaq } from './create/create.controller';
+import { updateFaq } from './update/update.controller';
+import { deleteFaq } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

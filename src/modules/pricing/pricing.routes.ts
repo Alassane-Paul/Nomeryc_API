@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import {
   getPricingPlans,
-  getPricingPlan,
-  getAllPricingPlans,
-  createPricingPlan,
-  updatePricingPlan,
-  deletePricingPlan,
-} from './pricing.controller';
+} from './list/list.controller';
+import { getPricingPlan } from './get/get.controller';
+import { getAllPricingPlans } from './list-all/list-all.controller';
+import { createPricingPlan } from './create/create.controller';
+import { updatePricingPlan } from './update/update.controller';
+import { deletePricingPlan } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

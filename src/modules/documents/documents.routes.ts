@@ -1,5 +1,8 @@
 import { Router } from 'express';
-import { getDocuments, createDocument, updateDocument, deleteDocument } from './documents.controller';
+import { getDocuments } from './list/list.controller';
+import { createDocument } from './create/create.controller';
+import { updateDocument } from './update/update.controller';
+import { deleteDocument } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

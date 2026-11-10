@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import {
   getTeamMembers,
-  getTeamMember,
-  getAllTeamMembers,
-  createTeamMember,
-  updateTeamMember,
-  deleteTeamMember,
-} from './team.controller';
+} from './list/list.controller';
+import { getTeamMember } from './get/get.controller';
+import { getAllTeamMembers } from './list-all/list-all.controller';
+import { createTeamMember } from './create/create.controller';
+import { updateTeamMember } from './update/update.controller';
+import { deleteTeamMember } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

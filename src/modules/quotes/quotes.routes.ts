@@ -1,5 +1,11 @@
 import { Router } from 'express';
-import { getQuotes, getQuote, createQuote, updateQuote, updateQuoteStatus, deleteQuote, getQuotePdf } from './quotes.controller';
+import { getQuotes } from './list/list.controller';
+import { getQuote } from './get/get.controller';
+import { createQuote } from './create/create.controller';
+import { updateQuote } from './update/update.controller';
+import { updateQuoteStatus } from './update-status/update-status.controller';
+import { deleteQuote } from './delete/delete.controller';
+import { getQuotePdf } from './get-pdf/get-pdf.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

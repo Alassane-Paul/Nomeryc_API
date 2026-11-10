@@ -1,5 +1,11 @@
 import { Router } from 'express';
-import { login, register, getMe, refreshToken, logout, forgotPassword, resetPassword } from './auth.controller';
+import { login } from './login/login.controller';
+import { register } from './register/register.controller';
+import { getMe } from './profile/profile.controller';
+import { refreshToken } from './refresh-token/refresh-token.controller';
+import { logout } from './logout/logout.controller';
+import { forgotPassword } from './forgot-password/forgot-password.controller';
+import { resetPassword } from './reset-password/reset-password.controller';
 import { authMiddleware } from '../../middlewares/auth.middleware';
 import rateLimit from 'express-rate-limit';
 

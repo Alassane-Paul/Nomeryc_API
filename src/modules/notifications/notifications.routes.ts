@@ -1,11 +1,9 @@
 import { Router } from 'express';
-import {
-  getNotifications,
-  getUnreadCount,
-  markAsRead,
-  markAllAsRead,
-  deleteNotification,
-} from './notifications.controller';
+import { getNotifications } from './list/list.controller';
+import { getUnreadCount } from './unread-count/unread-count.controller';
+import { markAsRead } from './read/read.controller';
+import { markAllAsRead } from './read-all/read-all.controller';
+import { deleteNotification } from './delete/delete.controller';
 import { authMiddleware } from '../../middlewares/auth.middleware';
 
 const notificationsRouter = Router();

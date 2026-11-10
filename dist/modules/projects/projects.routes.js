@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const list_controller_1 = require("./list/list.controller");
+const get_controller_1 = require("./get/get.controller");
+const create_controller_1 = require("./create/create.controller");
+const update_controller_1 = require("./update/update.controller");
+const delete_controller_1 = require("./delete/delete.controller");
+const auth_middleware_1 = require("../../middlewares/auth.middleware");
+const user_enum_1 = require("../../enums/user.enum");
+const projectsRouter = (0, express_1.Router)();
+projectsRouter.use(auth_middleware_1.authMiddleware);
+projectsRouter.get('/', list_controller_1.getProjects);
+projectsRouter.get('/:id', get_controller_1.getProject);
+projectsRouter.post('/', create_controller_1.createProject);
+projectsRouter.patch('/:id', update_controller_1.updateProject);
+projectsRouter.delete('/:id', (0, auth_middleware_1.authorizationMiddleware)([user_enum_1.UserRole.ADMIN]), delete_controller_1.deleteProject);
+exports.default = projectsRouter;

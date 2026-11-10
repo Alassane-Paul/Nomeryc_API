@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const stripe_controller_1 = require("./stripe/stripe.controller");
+const fedapay_controller_1 = require("./fedapay/fedapay.controller");
+const auth_middleware_1 = require("../../middlewares/auth.middleware");
+const paymentsRouter = (0, express_1.Router)();
+paymentsRouter.use(auth_middleware_1.authMiddleware);
+paymentsRouter.post('/stripe/:id', stripe_controller_1.initStripePayment);
+paymentsRouter.post('/fedapay/:id', fedapay_controller_1.initFedapayPayment);
+exports.default = paymentsRouter;

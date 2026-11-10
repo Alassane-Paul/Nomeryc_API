@@ -1,5 +1,9 @@
 import { Router } from 'express';
-import { getUsers, getUser, updateUser, changePassword, deleteUser } from './users.controller';
+import { getUsers } from './list/list.controller';
+import { getUser } from './get/get.controller';
+import { updateUser } from './update/update.controller';
+import { changePassword } from './change-password/change-password.controller';
+import { deleteUser } from './delete/delete.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

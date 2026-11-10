@@ -1,5 +1,11 @@
 import { Router } from 'express';
-import { getInvoices, getInvoice, createInvoice, updateInvoice, markAsPaid, deleteInvoice, getInvoicePdf } from './invoices.controller';
+import { getInvoices } from './list/list.controller';
+import { getInvoice } from './get/get.controller';
+import { createInvoice } from './create/create.controller';
+import { updateInvoice } from './update/update.controller';
+import { markAsPaid } from './pay/pay.controller';
+import { deleteInvoice } from './delete/delete.controller';
+import { getInvoicePdf } from './pdf/pdf.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { getDashboardAnalytics, getPublicStats } from './analytics.controller';
+import { getDashboardAnalytics } from './dashboard/dashboard.controller';
+import { getPublicStats } from './public-stats/public-stats.controller';
 import { authMiddleware, authorizationMiddleware } from '../../middlewares/auth.middleware';
 import { UserRole } from '../../enums/user.enum';
 

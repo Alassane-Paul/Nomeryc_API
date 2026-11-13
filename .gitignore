@@ -3,5 +3,5 @@ node_modules/
 docs/
 
 # Fichiers uploadés
-uploads/
+
 !uploads/.gitkeep
